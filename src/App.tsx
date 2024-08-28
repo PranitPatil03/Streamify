@@ -1,11 +1,11 @@
-import { Button } from './components/ui/button'
+import { SidebarDemo } from "./components/Dashboard"
 
 function App() {
 
   return (
-    <>
-      <Button></Button>
-    </>
+    <div className="w-full h-screen">
+      <SidebarDemo />
+    </div>
   )
 }
 
