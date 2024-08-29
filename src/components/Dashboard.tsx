@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Route, Routes, Link } from "react-router-dom";
 import {
   IconArrowLeft,
   IconBrandTabler,
@@ -9,39 +10,53 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ModeToggle } from "./mode-toggle";
 import { Sidebar, SidebarBody, SidebarLink } from "./ui/sidebar";
+import { useNavigate } from "react-router-dom";
+import DashboardContent from "./DashboardContent";
+
 
 export function SidebarDemo() {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
   const links = [
     {
       label: "Dashboard",
-      href: "/Dashboard",
+      href: "/",
       icon: (
         <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-7 w-7 flex-shrink-0" />
       ),
     },
     {
-      label: "Profile",
-      href: "#",
+      label: "User Analytics",
+      href: "/user-analytics",
       icon: (
         <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-7 w-7 flex-shrink-0" />
       ),
     },
     {
+      label: "Performance",
+      href: "/performance",
+      icon: (
+        <IconSettings className="text-neutral-700 dark:text-neutral-200 h-7 w-7 flex-shrink-0" />
+      ),
+    },
+    {
       label: "Settings",
-      href: "#",
+      href: "/settings",
       icon: (
         <IconSettings className="text-neutral-700 dark:text-neutral-200 h-7 w-7 flex-shrink-0" />
       ),
     },
     {
       label: "Logout",
-      href: "#",
+      href: "/logout",
       icon: (
         <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-7 w-7 flex-shrink-0" />
       ),
     },
+    
   ];
-  const [open, setOpen] = useState(false);
+
   return (
     <div
       className={cn(
@@ -55,7 +70,9 @@ export function SidebarDemo() {
             {open ? <Logo /> : <LogoIcon />}
             <div className="mt-8 flex flex-col gap-2">
               {links.map((link, idx) => (
-                <SidebarLink key={idx} link={link} />
+                <div key={idx} onClick={() => navigate(link.href)}>
+                  <SidebarLink link={link} />
+                </div>
               ))}
             </div>
           </div>
@@ -82,10 +99,11 @@ export function SidebarDemo() {
     </div>
   );
 }
+
 export const Logo = () => {
   return (
-    <a
-      href="#"
+    <Link
+      to="/"
       className="text-xl font-normal flex space-x-2 items-center text-black py-1 relative z-20"
     >
       <div className="h-7 w-7 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
@@ -96,17 +114,18 @@ export const Logo = () => {
       >
         Streamify
       </motion.span>
-    </a>
+    </Link>
   );
 };
+
 export const LogoIcon = () => {
   return (
-    <a
-      href="#"
+    <Link
+      to="/"
       className="font-normal flex space-x-2 items-center text-2xl text-black py-1 relative z-20"
     >
       <div className="h-7 w-7 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
-    </a>
+    </Link>
   );
 };
 
@@ -114,8 +133,15 @@ export const Dashboard = () => {
   return (
     <div className="flex flex-1">
       <div className="p-2 md:p-10 border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
-        <div className="flex justify-end">
+        <div className="flex justify-between p-2 pb-4 border-b border-neutral-200 dark:border-neutral-700">
+          <p className="text-4xl">Streamify Analytics Dashboard</p>
           <ModeToggle />
+        </div>
+        <div>
+          <Routes>
+            <Route path="/" element={<DashboardContent />} />
+            <Route path="*" element={<h1>404: Page not found</h1>} />
+          </Routes>
         </div>
       </div>
     </div>
