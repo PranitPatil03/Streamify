@@ -1,12 +1,11 @@
-import { SidebarDemo } from "./components/Dashboard"
+import { SidebarDemo } from "./components/Dashboard";
 
 function App() {
-
   return (
     <div className="w-full h-screen">
       <SidebarDemo />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
