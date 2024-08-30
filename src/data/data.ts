@@ -26,23 +26,86 @@ export const data = {
   ],
 
   revenueDistribution: [
-    { source: "Premium Subscriptions", amount: 18425917 },
-    { source: "Ad-Supported Tier", amount: 4913578 },
-    { source: "Merchandise", amount: 737036 },
-    { source: "Partnerships", amount: 491358 },
+    {
+      source: "Ads",
+      amount: 4913578,
+      fill: "hsl(var(--chart-2))",
+    },
+    {
+      source: "Premium",
+      amount: 18425917,
+      fill: "hsl(var(--chart-1))",
+    },
+    { source: "Merchandise", amount: 737036, fill: "hsl(var(--chart-3))" },
+    {
+      source: "Partnerships",
+      amount: 491358,
+      fill: "hsl(var(--chart-4))",
+    },
+    { source: "Live Events", amount: 245679, fill: "hsl(var(--chart-4))" },
   ],
 
   topStreamedSongs: [
-    { songName: "Anti-Hero", artist: "Taylor Swift", streams: 1234567 },
-    { songName: "As It Was", artist: "Harry Styles", streams: 1123456 },
-    { songName: "Cruel Summer", artist: "Taylor Swift", streams: 1012345 },
-    { songName: "Flowers", artist: "Miley Cyrus", streams: 901234 },
-    { songName: "Last Night", artist: "Morgan Wallen", streams: 890123 },
-    { songName: "Blinding Lights", artist: "The Weeknd", streams: 875432 },
-    { songName: "Shape of You", artist: "Ed Sheeran", streams: 860123 },
-    { songName: "Dance The Night", artist: "Dua Lipa", streams: 845678 },
-    { songName: "Levitating", artist: "Dua Lipa", streams: 832345 },
-    { songName: "Watermelon Sugar", artist: "Harry Styles", streams: 821234 },
+    {
+      songName: "Anti-Hero",
+      artist: "Taylor Swift",
+      streams: 823456,
+      fill: "hsl(var(--chart-3))",
+    },
+    {
+      songName: "As It Was",
+      artist: "Harry Styles",
+      streams: 912345,
+      fill: "hsl(var(--chart-1))",
+    },
+    {
+      songName: "Cruel Summer",
+      artist: "Taylor Swift",
+      streams: 785432,
+      fill: "hsl(var(--chart-4))",
+    },
+    {
+      songName: "Flowers",
+      artist: "Miley Cyrus",
+      streams: 654789,
+      fill: "hsl(var(--chart-2))",
+    },
+    {
+      songName: "Last Night",
+      artist: "Morgan Wallen",
+      streams: 832567,
+      fill: "hsl(var(--chart-3))",
+    },
+    {
+      songName: "Lights",
+      artist: "The Weeknd",
+      streams: 745321,
+      fill: "hsl(var(--chart-1))",
+    },
+    {
+      songName: "Shape of You",
+      artist: "Ed Sheeran",
+      streams: 993852,
+      fill: "hsl(var(--chart-2))",
+    },
+    {
+      songName: "Dance Night",
+      artist: "Dua Lipa",
+      streams: 812345,
+      fill: "hsl(var(--chart-1))",
+    },
+    {
+      songName: "Levitating",
+      artist: "Dua Lipa",
+      streams: 734567,
+      fill: "hsl(var(--chart-3))",
+    },
+    {
+      songName: "Sugar",
+      artist: "Harry Styles",
+      streams: 871234,
+      fill: "hsl(var(--chart-2))",
+    },
   ],
 
   recentStreams: [

@@ -22,13 +22,13 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function Chart() {
+export function UserGrowth() {
   return (
     <div className="w-full md:w-1/2 shadow-md dark:shadow-md dark:shadow-gray-900 border border-neutral-200 dark:border-neutral-900 rounded-xl">
       <Card className="w-full">
         <CardHeader>
           <CardTitle>User Growth</CardTitle>
-          <CardDescription>January - June 2024</CardDescription>
+          <CardDescription>January - December 2023</CardDescription>
         </CardHeader>
         <CardContent>
           <ChartContainer config={chartConfig} className="w-full h-[150px] md:h-[200px]">

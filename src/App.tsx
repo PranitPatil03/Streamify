@@ -4,8 +4,8 @@ import {
   Route,
   createRoutesFromElements,
 } from "react-router-dom";
-import { SidebarDemo } from "./components/Dashboard";
-import DashboardContent from "./components/DashboardContent";
+import { SidebarDemo } from "./page/Dashboard";
+import DashboardContent from "./page/DashboardContent";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

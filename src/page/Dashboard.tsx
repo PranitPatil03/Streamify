@@ -8,11 +8,10 @@ import {
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ModeToggle } from "./mode-toggle";
-import { Sidebar, SidebarBody, SidebarLink } from "./ui/sidebar";
+import { ModeToggle } from "../components/mode-toggle";
+import { Sidebar, SidebarBody, SidebarLink } from "../components/ui/sidebar";
 import { useNavigate } from "react-router-dom";
 import DashboardContent from "./DashboardContent";
-
 
 export function SidebarDemo() {
   const [open, setOpen] = useState(false);
@@ -54,7 +53,6 @@ export function SidebarDemo() {
         <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-7 w-7 flex-shrink-0" />
       ),
     },
-    
   ];
 
   return (
