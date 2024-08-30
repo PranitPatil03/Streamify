@@ -7,18 +7,17 @@ import {
 import { SidebarDemo } from "./components/Dashboard";
 import DashboardContent from "./components/DashboardContent";
 
-function App() {
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<SidebarDemo />}>
-        <Route index element={<DashboardContent />} />
-        <Route path="*" element={<h1>404: Page not found</h1>} />
-      </Route>
-    )
-  );
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<SidebarDemo />}>
+      <Route index element={<DashboardContent />} />
+    </Route>
+  )
+);
 
+function App() {
   return (
-    <div className="w-full h-screen">
+    <div className="bg-gray-50 dark:bg-neutral-900 min-h-screen">
       <RouterProvider router={router} />
     </div>
   );

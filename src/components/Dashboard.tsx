@@ -60,12 +60,12 @@ export function SidebarDemo() {
   return (
     <div
       className={cn(
-        "flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1 mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
+        "flex flex-col md:flex-row bg-gray-50 dark:bg-neutral-900 w-full flex-1 mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
         "h-screen w-full"
       )}
     >
       <Sidebar open={open} setOpen={setOpen}>
-        <SidebarBody className="justify-between gap-10">
+        <SidebarBody className="justify-between gap-10 border-r border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
             <div className="mt-8 flex flex-col gap-2">
@@ -131,13 +131,13 @@ export const LogoIcon = () => {
 
 export const Dashboard = () => {
   return (
-    <div className="flex flex-1">
-      <div className="p-2 md:p-10 border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
+    <div className="flex flex-1 overflow-hidden bg-gray-50 dark:bg-neutral-900">
+      <div className="flex flex-col w-full h-full">
         <div className="flex justify-between p-2 pb-4 border-b border-neutral-200 dark:border-neutral-700">
-          <p className="text-4xl">Streamify Analytics Dashboard</p>
+          <p className="text-4xl">Dashboard</p>
           <ModeToggle />
         </div>
-        <div>
+        <div className="flex-1 overflow-y-auto p-2 md:p-10">
           <Routes>
             <Route path="/" element={<DashboardContent />} />
             <Route path="*" element={<h1>404: Page not found</h1>} />
