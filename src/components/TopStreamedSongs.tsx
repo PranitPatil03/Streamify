@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Bar, BarChart, CartesianGrid, Rectangle, XAxis } from "recharts";
 
 import {
@@ -25,8 +26,8 @@ const chartConfig = {
   "As It Was": {
     label: "As It Was",
   },
-  "Cruel Summer": {
-    label: "Cruel Summer",
+  Summer: {
+    label: "Summer",
   },
   Flowers: {
     label: "Flowers",
@@ -37,12 +38,6 @@ const chartConfig = {
   "Dance Night": {
     label: "Dance Night",
   },
-  Levitating: {
-    label: "Levitating",
-  },
-  Sugar: {
-    label: "Sugar",
-  },
   "Shape of You": {
     label: "Shape of You",
   },
@@ -51,7 +46,26 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => setIsMobile(window.innerWidth < 768);
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
+  return isMobile;
+}
+
 export function TopStreamedSongs() {
+  const isMobile = useIsMobile();
+
+  const chartData = isMobile
+    ? data.topStreamedSongs.slice(0, 5)
+    : data.topStreamedSongs;
+
   return (
     <Card>
       <CardHeader>
@@ -61,9 +75,9 @@ export function TopStreamedSongs() {
       <CardContent>
         <ChartContainer
           config={chartConfig}
-          className="h-[150px] md:h-[300px] w-full"
+          className="h-[200px] md:h-[300px] w-full"
         >
-          <BarChart accessibilityLayer data={data.topStreamedSongs}>
+          <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="songName"

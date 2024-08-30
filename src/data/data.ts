@@ -59,7 +59,7 @@ export const data = {
       fill: "hsl(var(--chart-1))",
     },
     {
-      songName: "Cruel Summer",
+      songName: "Summer",
       artist: "Taylor Swift",
       streams: 785432,
       fill: "hsl(var(--chart-4))",
@@ -94,27 +94,30 @@ export const data = {
       streams: 812345,
       fill: "hsl(var(--chart-1))",
     },
-    {
-      songName: "Levitating",
-      artist: "Dua Lipa",
-      streams: 734567,
-      fill: "hsl(var(--chart-3))",
-    },
-    {
-      songName: "Sugar",
-      artist: "Harry Styles",
-      streams: 871234,
-      fill: "hsl(var(--chart-2))",
-    },
+    // {
+    //   songName: "Levitating",
+    //   artist: "Dua Lipa",
+    //   streams: 734567,
+    //   fill: "hsl(var(--chart-3))",
+    // },
+    // {
+    //   songName: "Sugar",
+    //   artist: "Harry Styles",
+    //   streams: 871234,
+    //   fill: "hsl(var(--chart-2))",
+    // },
   ],
 
   recentStreams: [
     {
       songName: "Anti-Hero",
+      userId: "user789012",
       artist: "Taylor Swift",
       dateStreamed: "2024-08-29T14:35:22Z",
       streamCount: 54321,
-      userId: "user789012",
+      albumName: "Midnights",
+      genre: "Pop",
+      playlist: "Top Hits",
     },
     {
       songName: "As It Was",
@@ -122,6 +125,9 @@ export const data = {
       dateStreamed: "2024-08-29T14:34:56Z",
       streamCount: 52345,
       userId: "user345678",
+      albumName: "Harry's House",
+      genre: "Pop",
+      playlist: "Trending Now",
     },
     {
       songName: "Cruel Summer",
@@ -129,6 +135,9 @@ export const data = {
       dateStreamed: "2024-08-29T14:34:12Z",
       streamCount: 51234,
       userId: "user901234",
+      albumName: "Lover",
+      genre: "Pop",
+      playlist: "Summer Vibes",
     },
     {
       songName: "Flowers",
@@ -136,6 +145,9 @@ export const data = {
       dateStreamed: "2024-08-29T14:33:45Z",
       streamCount: 49876,
       userId: "user567890",
+      albumName: "Endless Summer Vacation",
+      genre: "Pop",
+      playlist: "Workout Playlist",
     },
     {
       songName: "Last Night",
@@ -143,6 +155,9 @@ export const data = {
       dateStreamed: "2024-08-29T14:33:01Z",
       streamCount: 48765,
       userId: "user123456",
+      albumName: "One Thing At A Time",
+      genre: "Country",
+      playlist: "Country Hits",
     },
     {
       songName: "Blinding Lights",
@@ -150,6 +165,9 @@ export const data = {
       dateStreamed: "2024-08-29T14:32:30Z",
       streamCount: 47654,
       userId: "user234567",
+      albumName: "After Hours",
+      genre: "Synthwave",
+      playlist: "Chill Beats",
     },
     {
       songName: "Shape of You",
@@ -157,6 +175,9 @@ export const data = {
       dateStreamed: "2024-08-29T14:31:55Z",
       streamCount: 46543,
       userId: "user456789",
+      albumName: "÷ (Divide)",
+      genre: "Pop",
+      playlist: "Dance Party",
     },
     {
       songName: "Dance The Night",
@@ -164,6 +185,9 @@ export const data = {
       dateStreamed: "2024-08-29T14:31:20Z",
       streamCount: 45432,
       userId: "user678901",
+      albumName: "Barbie The Album",
+      genre: "Dance",
+      playlist: "Top 40",
     },
     {
       songName: "Levitating",
@@ -171,6 +195,9 @@ export const data = {
       dateStreamed: "2024-08-29T14:30:45Z",
       streamCount: 44321,
       userId: "user890123",
+      albumName: "Future Nostalgia",
+      genre: "Disco",
+      playlist: "Feel Good",
     },
     {
       songName: "Watermelon Sugar",
@@ -178,6 +205,9 @@ export const data = {
       dateStreamed: "2024-08-29T14:30:10Z",
       streamCount: 43210,
       userId: "user012345",
+      albumName: "Fine Line",
+      genre: "Pop",
+      playlist: "Summer Hits",
     },
   ],
 

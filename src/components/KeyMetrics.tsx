@@ -17,7 +17,7 @@ const KeyMetrics = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-2xl font-bold">{data.keyMetrics.totalUsers}</p>
+              <p className="text-3xl font-bold">{data.keyMetrics.totalUsers}</p>
             </CardContent>
           </Card>
           <Card className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2">
@@ -30,7 +30,7 @@ const KeyMetrics = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-2xl font-bold">
+              <p className="text-3xl font-bold">
                 {data.keyMetrics.activeUsers}
               </p>
             </CardContent>
@@ -45,7 +45,7 @@ const KeyMetrics = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-2xl font-bold">
+              <p className="text-3xl font-bold">
                 {data.keyMetrics.totalStreams}
               </p>
             </CardContent>
@@ -63,7 +63,7 @@ const KeyMetrics = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-2xl font-bold">{data.keyMetrics.revenue}</p>
+              <p className="text-3xl font-bold">{data.keyMetrics.revenue}</p>
             </CardContent>
           </Card>
           <Card className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2">
@@ -76,7 +76,7 @@ const KeyMetrics = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-2xl font-bold">{data.keyMetrics.topArtist}</p>
+              <p className="text-3xl font-bold">{data.keyMetrics.topArtist}</p>
             </CardContent>
           </Card>
           <Card className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2">
@@ -89,7 +89,7 @@ const KeyMetrics = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-2xl font-bold">{data.keyMetrics.topArtist}</p>
+              <p className="text-3xl font-bold">{data.keyMetrics.topArtist}</p>
             </CardContent>
           </Card>
         </div>

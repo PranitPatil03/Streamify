@@ -6,6 +6,7 @@ import {
   IconSettings,
   IconUserBolt,
 } from "@tabler/icons-react";
+import "../App.css";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ModeToggle } from "../components/mode-toggle";
@@ -131,7 +132,7 @@ export const Dashboard = () => {
   return (
     <div className="flex flex-1 overflow-hidden bg-gray-50 dark:bg-neutral-900">
       <div className="flex flex-col w-full h-full">
-        <div className="flex justify-between p-2 pb-4 border-b border-neutral-200 dark:border-neutral-700">
+        <div className="flex justify-between p-4 pb-4 border-b border-neutral-200 dark:border-neutral-700">
           <p className="text-4xl">Dashboard</p>
           <ModeToggle />
         </div>

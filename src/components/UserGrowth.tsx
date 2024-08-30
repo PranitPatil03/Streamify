@@ -31,7 +31,7 @@ export function UserGrowth() {
           <CardDescription>January - December 2023</CardDescription>
         </CardHeader>
         <CardContent>
-          <ChartContainer config={chartConfig} className="w-full h-[150px] md:h-[200px]">
+          <ChartContainer config={chartConfig} className="w-full h-[150px] md:h-[210px]">
             <LineChart
               accessibilityLayer
               data={data.userGrowth}
