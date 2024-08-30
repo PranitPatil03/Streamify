@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import {
+  IconAlpha,
   IconArrowLeft,
   IconBrandTabler,
+  IconChartBar,
   IconSettings,
   IconUserBolt,
 } from "@tabler/icons-react";
@@ -37,7 +39,7 @@ export function SidebarDemo() {
       label: "Performance",
       href: "/performance",
       icon: (
-        <IconSettings className="text-neutral-700 dark:text-neutral-200 h-7 w-7 flex-shrink-0" />
+        <IconChartBar className="text-neutral-700 dark:text-neutral-200 h-7 w-7 flex-shrink-0" />
       ),
     },
     {
@@ -78,11 +80,11 @@ export function SidebarDemo() {
           <div>
             <SidebarLink
               link={{
-                label: "Manu Arora",
+                label: "Pranit Patil",
                 href: "#",
                 icon: (
                   <img
-                    src="https://assets.aceternity.com/manu.png"
+                    src="https://avatars.githubusercontent.com/u/91155068?s=400&u=d56f9587068c31cfd3f8196071a3fef4836fc563&v=4"
                     className="h-7 w-7 flex-shrink-0 rounded-full"
                     width={50}
                     height={50}
@@ -105,7 +107,7 @@ export const Logo = () => {
       to="/"
       className="text-xl font-normal flex space-x-2 items-center text-black py-1 relative z-20"
     >
-      <div className="h-7 w-7 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <IconAlpha className="text-neutral-700 dark:text-neutral-200 h-7 w-7 flex-shrink-0" />
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -123,7 +125,7 @@ export const LogoIcon = () => {
       to="/"
       className="font-normal flex space-x-2 items-center text-2xl text-black py-1 relative z-20"
     >
-      <div className="h-7 w-7 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <IconAlpha className="text-neutral-700 dark:text-neutral-200 h-7 w-7 flex-shrink-0" />
     </Link>
   );
 };
