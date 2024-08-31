@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Label, Pie, PieChart, Sector } from "recharts";
 import { PieSectorDataItem } from "recharts/types/polar/Pie";
 
@@ -24,6 +23,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { data } from "@/data/data";
+import React from "react";
 
 const chartConfig = {
   Male: {
