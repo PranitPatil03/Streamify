@@ -14,7 +14,7 @@ This project showcases real-time data visualization, user-friendly interfaces, a
 
 ## 📊 Dashboard Preview
 
-![Dashboard Overview](![screencapture-streamify-henna-vercel-app-2024-08-31-14_53_31](https://github.com/user-attachments/assets/39b658cb-0f11-4c2a-bcd0-9501b1551633))
+![Dashboard Overview](./src/assets/final.png)
 
 ## 🚀 Getting Started
 
