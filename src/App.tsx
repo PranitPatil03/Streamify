@@ -14,9 +14,9 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<SidebarDemo />}>
       <Route index element={<DashboardContent />} />
-      <Route path="user-analytics" element={<UserAnalytics />} />
-      <Route path="performance" element={<Performance />} />
-      <Route path="settings" element={<Settings />} />
+      <Route path="/user-analytics" element={<UserAnalytics />} />
+      <Route path="/performance" element={<Performance />} />
+      <Route path="/settings" element={<Settings />} />
     </Route>
   )
 );
