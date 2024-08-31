@@ -14,6 +14,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { data } from "@/data/data";
+import { useIsMobile } from "./TopStreamedSongs";
 
 const chartConfig = {
   desktop: {
@@ -23,18 +24,25 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function UserGrowth() {
+  const isMobile = useIsMobile();
+
+  const chartData = isMobile ? data.userGrowth.slice(0, 9) : data.userGrowth;
+
   return (
     <div className="w-full md:w-1/2 shadow-md dark:shadow-md dark:shadow-gray-900 border border-neutral-200 dark:border-neutral-900 rounded-xl">
       <Card className="w-full">
         <CardHeader>
           <CardTitle>User Growth</CardTitle>
-          <CardDescription>January - December 2023</CardDescription>
+          <CardDescription>Jan - Dec 2023</CardDescription>
         </CardHeader>
         <CardContent>
-          <ChartContainer config={chartConfig} className="w-full h-[150px] md:h-[210px]">
+          <ChartContainer
+            config={chartConfig}
+            className="w-full h-[150px] md:h-[210px]"
+          >
             <LineChart
               accessibilityLayer
-              data={data.userGrowth}
+              data={chartData}
               margin={{
                 left: 12,
                 right: 12,
@@ -54,6 +62,7 @@ export function UserGrowth() {
               />
               <Line
                 dataKey="totalUsers"
+                label="Total Users"
                 type="natural"
                 stroke="var(--color-desktop)"
                 strokeWidth={2}

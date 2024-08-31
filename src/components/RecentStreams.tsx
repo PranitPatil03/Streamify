@@ -135,7 +135,10 @@ export function RecentStreams() {
   });
 
   return (
-    <div className="w-full border p-5 rounded-md bg-white dark:bg-neutral-900">
+    <div className="w-full border p-5 rounded-md bg-white dark:bg-[#09090B]">
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold">Recent Streams</h1>
+      </div>
       <div className="flex items-center py-4">
         <Input
           placeholder="Filter songs..."
@@ -145,7 +148,7 @@ export function RecentStreams() {
           onChange={(event) =>
             table.getColumn("songName")?.setFilterValue(event.target.value)
           }
-          className="max-w-sm"
+          className="w-1/2 md:w-1/3 lg:w-1/4"
         />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

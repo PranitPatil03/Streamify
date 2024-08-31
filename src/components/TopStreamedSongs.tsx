@@ -46,7 +46,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-function useIsMobile() {
+export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -63,14 +63,14 @@ export function TopStreamedSongs() {
   const isMobile = useIsMobile();
 
   const chartData = isMobile
-    ? data.topStreamedSongs.slice(0, 5)
+    ? data.topStreamedSongs.slice(0, 4)
     : data.topStreamedSongs;
 
   return (
     <Card>
       <CardHeader>
         <CardTitle>Top Streamed Songs</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardDescription>Jan - Dec 2023</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer

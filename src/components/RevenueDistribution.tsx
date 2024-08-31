@@ -72,7 +72,7 @@ export function RevenueDistribution() {
       <CardHeader className="flex-row items-start space-y-0 pb-0">
         <div className="grid gap-1">
           <CardTitle>Revenue Distribution</CardTitle>
-          <CardDescription>January - December 2024</CardDescription>
+          <CardDescription>Jan - Dec 2023</CardDescription>
         </div>
         <Select value={activeRevenue} onValueChange={setActiveRevenue}>
           <SelectTrigger
