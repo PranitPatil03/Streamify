@@ -4,7 +4,7 @@ export const data = {
     activeUsers: 3245600,
     totalStreams: 789456000,
     revenue: 24567890,
-    topArtist: "Taylor Swift",
+    topArtist: "Drake",
     topAlbum: "Midnights",
     // averageDailyListeningTime: 145,
     // totalPlaylistsCreated: 12345678,

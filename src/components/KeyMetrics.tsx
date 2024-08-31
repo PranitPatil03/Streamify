@@ -26,13 +26,13 @@ const KeyMetrics = () => {
           <CardHeader>
             <CardTitle>
               <div className="flex flex-row gap-2 items-center justify-between">
-                <p className="text-lg lg:text-xl">{metric.title}</p>
+                <p className="text-sm 2xl:text-xl">{metric.title}</p>
                 <metric.icon className="w-6 h-6" />
               </div>
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-xl lg:text-3xl font-bold">{metric.value}</p>
+            <p className="text-xl 2xl:text-3xl font-bold">{metric.value}</p>
           </CardContent>
         </Card>
       ))}
