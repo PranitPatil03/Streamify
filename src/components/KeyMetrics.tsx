@@ -13,7 +13,7 @@ const KeyMetrics = () => {
     { title: "Total Streams", icon: Play, value: data.keyMetrics.totalStreams },
     { title: "Revenue", icon: DollarSign, value: data.keyMetrics.revenue },
     { title: "Top Artist", icon: Music, value: data.keyMetrics.topArtist },
-    { title: "Top Artist", icon: Music, value: data.keyMetrics.topArtist },
+    { title: "Top Album", icon: Music, value: data.keyMetrics.topAlbum },
   ];
 
   return (
@@ -21,7 +21,7 @@ const KeyMetrics = () => {
       {metrics.map((metric, index) => (
         <Card
           key={index}
-          className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2"
+          className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2 flex flex-col justify-between"
         >
           <CardHeader>
             <CardTitle>

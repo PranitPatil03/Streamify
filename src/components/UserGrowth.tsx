@@ -36,7 +36,7 @@ export function UserGrowth() {
       <CardContent>
         <ChartContainer
           config={chartConfig}
-          className="w-full h-[150px] md:h-[210px]"
+          className="w-full h-[150px] md:h-[300px]"
         >
           <LineChart
             accessibilityLayer

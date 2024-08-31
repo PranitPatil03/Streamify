@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useLocation } from "react-router-dom";
 import {
   IconAlpha,
   IconArrowLeft,
@@ -15,6 +15,9 @@ import { ModeToggle } from "../components/mode-toggle";
 import { Sidebar, SidebarBody, SidebarLink } from "../components/ui/sidebar";
 import { useNavigate } from "react-router-dom";
 import DashboardContent from "./DashboardContent";
+import UserAnalytics from "./UserAnalytics";
+import Performance from "./Performance";
+import Settings from "./Settings";
 
 export function SidebarDemo() {
   const [open, setOpen] = useState(false);
@@ -131,16 +134,37 @@ export const LogoIcon = () => {
 };
 
 export const Dashboard = () => {
+  const location = useLocation();
+
+  const getTitle = () => {
+    const path = location.pathname;
+    switch (path) {
+      case "/":
+        return "Dashboard";
+      case "/user-analytics":
+        return "User Analytics";
+      case "/performance":
+        return "Performance";
+      case "/settings":
+        return "Settings";
+      default:
+        return "Dashboard";
+    }
+  };
+
   return (
     <div className="flex flex-1 overflow-hidden bg-gray-50 dark:bg-neutral-900">
       <div className="flex flex-col w-full h-full">
         <div className="flex justify-between p-4 pb-4 border-b border-neutral-200 dark:border-neutral-700">
-          <p className="text-4xl">Dashboard</p>
+          <p className="text-4xl">{getTitle()}</p>
           <ModeToggle />
         </div>
         <div className="flex-1 overflow-y-auto p-2 md:p-10">
           <Routes>
             <Route path="/" element={<DashboardContent />} />
+            <Route path="/user-analytics" element={<UserAnalytics />} />
+            <Route path="/performance" element={<Performance />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<h1>404: Page not found</h1>} />
           </Routes>
         </div>

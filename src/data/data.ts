@@ -5,6 +5,7 @@ export const data = {
     totalStreams: 789456000,
     revenue: 24567890,
     topArtist: "Taylor Swift",
+    topAlbum: "Midnights",
     // averageDailyListeningTime: 145,
     // totalPlaylistsCreated: 12345678,
     // userRetentionRate: 0.85,
@@ -212,10 +213,30 @@ export const data = {
   ],
 
   subscriptionTiers: [
-    { tier: "Free", users: 2716050, percentage: 50 },
-    { tier: "Premium", users: 2170480, percentage: 40 },
-    { tier: "Family", users: 434568, percentage: 8 },
-    { tier: "Student", users: 111002, percentage: 2 },
+    {
+      tier: "Free",
+      users: 2716050,
+      percentage: 50,
+      fill: "hsl(var(--chart-2))",
+    },
+    {
+      tier: "Premium",
+      users: 2170480,
+      percentage: 40,
+      fill: "hsl(var(--chart-1))",
+    },
+    {
+      tier: "Family",
+      users: 434568,
+      percentage: 8,
+      fill: "hsl(var(--chart-3))",
+    },
+    {
+      tier: "Student",
+      users: 111002,
+      percentage: 2,
+      fill: "hsl(var(--chart-4))",
+    },
   ],
 
   artistPerformance: [
@@ -312,28 +333,32 @@ export const data = {
   ],
 
   genreDistribution: [
-    { genre: "Pop", percentage: 32 },
-    { genre: "Hip-Hop/Rap", percentage: 24 },
-    { genre: "Rock", percentage: 15 },
-    { genre: "Electronic/Dance", percentage: 10 },
-    { genre: "R&B", percentage: 8 },
-    { genre: "Country", percentage: 6 },
-    { genre: "Latin", percentage: 3 },
-    { genre: "Other", percentage: 2 },
+    { genre: "Pop", percentage: 32, fill: "hsl(var(--chart-1))" },
+    { genre: "Hip-Hop", percentage: 24, fill: "hsl(var(--chart-2))" },
+    { genre: "Rock", percentage: 15, fill: "hsl(var(--chart-3))" },
+    { genre: "Electronic", percentage: 10, fill: "hsl(var(--chart-4))" },
+    { genre: "R&B", percentage: 8, fill: "hsl(var(--chart-1))" },
+    { genre: "Country", percentage: 6, fill: "hsl(var(--chart-3))" },
+    { genre: "Latin", percentage: 3, fill: "hsl(var(--chart-2))" },
+    { genre: "Other", percentage: 2, fill: "hsl(var(--chart-1))" },
   ],
 
   userDemographics: {
     ageGroups: [
-      { group: "13-17", percentage: 15 },
-      { group: "18-24", percentage: 32 },
-      { group: "25-34", percentage: 28 },
-      { group: "35-44", percentage: 15 },
-      { group: "45+", percentage: 10 },
+      { group: "13-17", percentage: 15, fill: "hsl(var(--chart-1))" },
+      { group: "18-24", percentage: 32, fill: "hsl(var(--chart-2))" },
+      { group: "25-34", percentage: 28, fill: "hsl(var(--chart-3))" },
+      { group: "35-44", percentage: 15, fill: "hsl(var(--chart-1))" },
+      { group: "45+", percentage: 10, fill: "hsl(var(--chart-4))" },
     ],
     genderDistribution: [
-      { gender: "Male", percentage: 48 },
-      { gender: "Female", percentage: 51 },
-      { gender: "Non-binary/Other", percentage: 1 },
+      { gender: "Male", percentage: 48, fill: "hsl(var(--chart-1))" },
+      { gender: "Female", percentage: 51, fill: "hsl(var(--chart-2))" },
+      {
+        gender: "Non-binary/Other",
+        percentage: 1,
+        fill: "hsl(var(--chart-3))",
+      },
     ],
     countries: [
       { country: "United States", percentage: 30 },
