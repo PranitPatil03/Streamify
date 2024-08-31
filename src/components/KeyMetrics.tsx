@@ -3,98 +3,40 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { data } from "@/data/data";
 
 const KeyMetrics = () => {
-  return (
-    <>
-      <div className="flex flex-col gap-5 md:gap-7 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
-          <Card className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2">
-            <CardHeader>
-              <CardTitle>
-                <div className="flex flex-row gap-2 items-center justify-between">
-                  <p className="text-xl">Total Users</p>
-                  <Users className="w-6 h-6" />
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-bold">{data.keyMetrics.totalUsers}</p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2">
-            <CardHeader>
-              <CardTitle>
-                <div className="flex flex-row gap-2 items-center justify-between">
-                  <p className="text-xl">Active Users</p>
-                  <UserCheck className="w-6 h-6" />
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-bold">
-                {data.keyMetrics.activeUsers}
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2">
-            <CardHeader>
-              <CardTitle>
-                <div className="flex flex-row gap-2 items-center justify-between">
-                  <p className="text-xl">Total Streams</p>
-                  <Play className="w-6 h-6" />
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-bold">
-                {data.keyMetrics.totalStreams}
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+  const metrics = [
+    { title: "Total Users", icon: Users, value: data.keyMetrics.totalUsers },
+    {
+      title: "Active Users",
+      icon: UserCheck,
+      value: data.keyMetrics.activeUsers,
+    },
+    { title: "Total Streams", icon: Play, value: data.keyMetrics.totalStreams },
+    { title: "Revenue", icon: DollarSign, value: data.keyMetrics.revenue },
+    { title: "Top Artist", icon: Music, value: data.keyMetrics.topArtist },
+    { title: "Top Artist", icon: Music, value: data.keyMetrics.topArtist },
+  ];
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
-          <Card className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2">
-            <CardHeader>
-              <CardTitle>
-                <div className="flex flex-row gap-2 items-center justify-between">
-                  <p className="text-xl">Revenue</p>
-                  <DollarSign className="w-6 h-6" />
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-bold">{data.keyMetrics.revenue}</p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2">
-            <CardHeader>
-              <CardTitle>
-                <div className="flex flex-row gap-2 items-center justify-between">
-                  <p className="text-xl">Top Artist</p>
-                  <Music className="w-6 h-6" />
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-bold">{data.keyMetrics.topArtist}</p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2">
-            <CardHeader>
-              <CardTitle>
-                <div className="flex flex-row gap-2 items-center justify-between">
-                  <p className="text-xl">Top Artist</p>
-                  <Music className="w-6 h-6" />
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-bold">{data.keyMetrics.topArtist}</p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </>
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 w-full">
+      {metrics.map((metric, index) => (
+        <Card
+          key={index}
+          className="rounded-xl shadow-md dark:shadow-md dark:shadow-gray-900 py-2"
+        >
+          <CardHeader>
+            <CardTitle>
+              <div className="flex flex-row gap-2 items-center justify-between">
+                <p className="text-lg lg:text-xl">{metric.title}</p>
+                <metric.icon className="w-6 h-6" />
+              </div>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-xl lg:text-3xl font-bold">{metric.value}</p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
   );
 };
 

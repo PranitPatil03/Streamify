@@ -1,5 +1,4 @@
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
-
 import {
   Card,
   CardContent,
@@ -29,49 +28,47 @@ export function UserGrowth() {
   const chartData = isMobile ? data.userGrowth.slice(0, 9) : data.userGrowth;
 
   return (
-    <div className="w-full md:w-1/2 shadow-md dark:shadow-md dark:shadow-gray-900 border border-neutral-200 dark:border-neutral-900 rounded-xl">
-      <Card className="w-full">
-        <CardHeader>
-          <CardTitle>User Growth</CardTitle>
-          <CardDescription>Jan - Dec 2023</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <ChartContainer
-            config={chartConfig}
-            className="w-full h-[150px] md:h-[210px]"
+    <Card className="w-full shadow-md dark:shadow-md dark:shadow-gray-900 border border-neutral-200 dark:border-neutral-900 rounded-xl">
+      <CardHeader>
+        <CardTitle>User Growth</CardTitle>
+        <CardDescription>Jan - Dec 2023</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <ChartContainer
+          config={chartConfig}
+          className="w-full h-[150px] md:h-[210px]"
+        >
+          <LineChart
+            accessibilityLayer
+            data={chartData}
+            margin={{
+              left: 12,
+              right: 12,
+            }}
           >
-            <LineChart
-              accessibilityLayer
-              data={chartData}
-              margin={{
-                left: 12,
-                right: 12,
-              }}
-            >
-              <CartesianGrid vertical={false} />
-              <XAxis
-                dataKey="month"
-                tickLine={false}
-                axisLine={false}
-                tickMargin={8}
-                tickFormatter={(value) => value.slice(0, 3)}
-              />
-              <ChartTooltip
-                cursor={false}
-                content={<ChartTooltipContent hideLabel />}
-              />
-              <Line
-                dataKey="totalUsers"
-                label="Total Users"
-                type="natural"
-                stroke="var(--color-desktop)"
-                strokeWidth={2}
-                dot={false}
-              />
-            </LineChart>
-          </ChartContainer>
-        </CardContent>
-      </Card>
-    </div>
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="month"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              tickFormatter={(value) => value.slice(0, 3)}
+            />
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent hideLabel />}
+            />
+            <Line
+              dataKey="totalUsers"
+              label="Total Users"
+              type="natural"
+              stroke="var(--color-desktop)"
+              strokeWidth={2}
+              dot={false}
+            />
+          </LineChart>
+        </ChartContainer>
+      </CardContent>
+    </Card>
   );
 }
